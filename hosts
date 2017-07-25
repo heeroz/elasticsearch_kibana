@@ -1,0 +1,20 @@
+; Top group to define what kind of environment this is.
+; Examples of the group name are "production", "test" and so on.
+[production:children]
+local
+
+; This is a dummy
+[local]
+localhost
+
+[es_servers]
+iot4
+iot5
+iot6
+
+[es_masters]
+
+[es_datanodes]
+
+[kibana_server]
+iot4
