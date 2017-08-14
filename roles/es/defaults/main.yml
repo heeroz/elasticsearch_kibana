@@ -16,16 +16,18 @@ es_data_path_list:
   - '/elasticsearch'
 
 #Prevent the "split brain" by configuring the majority of nodes (total number of master-eligible nodes / 2 + 1):
-es_minimum_master_nodes: 2
-#es_minimum_master_nodes: 1
+#es_minimum_master_nodes: 2
+es_minimum_master_nodes: 1
 
 # repo settings, use latest elasticsearch by apt install
 es_major_version: "5.x"
-es_version: "5.5.0"
-es_use_repository: true
+es_version: "5.0.0"
+es_use_repository: false 
 es_apt_key: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
 es_apt_url: "deb https://artifacts.elastic.co/packages/{{ es_major_version }}/apt stable main"
 es_apt_url_old: "deb http://packages.elastic.co/elasticsearch/{{ es_major_version }}/debian stable main"
+es_custom_package_url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ es_version }}.deb"
+
 
 # install master and datanode on the same node or not
 #es_master_datanode_separate: true

@@ -8,13 +8,11 @@ local
 localhost
 
 [es_servers]
-iot4
-iot5
-iot6
+iot7
 
 [es_masters]
 
 [es_datanodes]
 
 [kibana_server]
-iot4
+iot7
